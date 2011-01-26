@@ -346,7 +346,13 @@
 	NSArray *bits = [str componentsSeparatedByString:@"\x00"];
 	gatecount=1;
 	int i=0;
-	while(i<[bits count]) {
+	int safeguard = [bits count] % 3;
+	if(safeguard)
+	{
+		NSLog(@"! Whoops! The data read is mangled; This is what we got: %@", bits);
+		NSLog(@"! Ignoring the last %d item(s).", safeguard);
+	}
+	while(i<[bits count] - safeguard) {
 		
 	    aGate = [[BNGateway alloc] init];
 	    [aGate setAddress:[bits objectAtIndex:i]];
