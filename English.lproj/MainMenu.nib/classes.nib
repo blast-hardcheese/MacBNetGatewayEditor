@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {closeError = id; }; 
+            CLASS = ErrorController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {errorDesc = id; errorSheet = id; errorTitle = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addGateway = id; 
+                moveGatewayDown = id; 
+                moveGatewayUp = id; 
+                removeGateway = id; 
+                saveGateways = id; 
+            }; 
+            CLASS = MainController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                err = id; 
+                gatewayTable = id; 
+                gatewayView = id; 
+                mainWindow = id; 
+                tabView = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
